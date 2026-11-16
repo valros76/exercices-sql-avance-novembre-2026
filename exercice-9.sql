@@ -9,3 +9,11 @@
 -- ● Indice & Objectif : Un index composite fonctionne comme un annuaire trié
 -- par Nom, puis Prénom : impossible de chercher directement par prénom sans
 -- connaître le nom.
+
+-- L'index contient déjà le statut, et peut donc isoler les statut="LIVREE" pour utiliser un Scan Index, donc ne rentre même pas dans la table.
+EXPLAIN
+SELECT client_id, montant_total FROM commandes WHERE statut = 'LIVREE';
+
+-- Ici, l'id du client ne suffit pas à récupérer une valeur dans l'index, car on manque d'informations pour piocher dedans, donc il relit la table client entière.
+EXPLAIN
+SELECT statut, montant_total FROM commandes WHERE client_id = 2;
