@@ -4,8 +4,7 @@
 -- stock strictement inférieur à 25 unités, triés du stock le plus critique au plus
 -- confortable.
 -- ● Mission : Affiche l'id, le nom et le stock des produits concernés.
--- ● Indice & Objectif : Maîtriser le filtrage (WHERE) et le tri (ORDER BY) en ne
--- ramenant que les colonnes utiles.
+-- ● Indice & Objectif : Maîtriser le filtrage (WHERE) et le tri (ORDER BY) en ne ramenant que les colonnes utiles.
 
 SELECT id, nom, stock
 FROM produits
