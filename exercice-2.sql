@@ -6,3 +6,8 @@
 -- ● Mission : Affiche l'id, le nom et le stock des produits concernés.
 -- ● Indice & Objectif : Maîtriser le filtrage (WHERE) et le tri (ORDER BY) en ne
 -- ramenant que les colonnes utiles.
+
+SELECT id, nom, stock
+FROM produits
+WHERE stock < 25
+ORDER BY stock ASC;
