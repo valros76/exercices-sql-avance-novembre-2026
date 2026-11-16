@@ -8,3 +8,17 @@
 -- ● Indice & Objectif : GROUP BY regroupe les lignes sans se soucier de leur
 -- ordre initial ; trier avant de regrouper consomme de la RAM (sort_buffer_size)
 -- pour rien.
+
+-- SELECT 
+-- entrepot_id,
+-- COUNT(*) AS nb_references
+-- FROM (
+--   SELECT entrepot_id, prix_unitaire
+--   FROM produits
+--   ORDER BY prix_unitaire DESC
+-- ) t
+-- GROUP BY entrepot_id;
+
+SELECT entrepot_id
+FROM produits
+GROUP BY entrepot_id;
