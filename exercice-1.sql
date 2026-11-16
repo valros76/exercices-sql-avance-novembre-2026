@@ -6,8 +6,23 @@
 -- ● Scénario : L'équipe marketing prépare une campagne de fidélisation et te
 -- demande simplement la liste des clients avec leur segment (Entreprise,
 -- Grand Compte, PME, Startup).
--- ● Mission : Écris la requête récupérant uniquement le nom et le segment des
--- clients. Lance ensuite EXPLAIN devant ta requête et observe la colonne Extra.
--- ● Indice & Objectif : Repère l'index idx_clients_covering déjà présent dans ta
--- base. Grâce à lui, InnoDB lit directement le sommaire sans ouvrir la table
--- principale (Using index / Index Only Scan).
+-- ● Mission : Écris la requête récupérant uniquement le nom et le segment des clients. Lance ensuite EXPLAIN devant ta requête et observe la colonne Extra.
+-- ● Indice & Objectif : Repère l'index idx_clients_covering déjà présent dans ta base. Grâce à lui, InnoDB lit directement le sommaire sans ouvrir la table principale (Using index / Index Only Scan).
+EXPLAIN
+SELECT nom, segment
+FROM clients;
+
+SHOW INDEX FROM clients FROM advanced_sql;
+
+-- 1
+-- SIMPLE
+-- clients
+-- NULL
+-- index
+-- NULL
+-- idx_clients_covering
+-- 808
+-- NULL
+-- 24
+-- 100.00
+-- Using index
