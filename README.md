@@ -1,0 +1,1 @@
+# exercices-sql-avance-novembre-2026
