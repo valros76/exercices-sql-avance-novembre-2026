@@ -1,0 +1,9 @@
+-- Exercice 4 : Le ménage de printemps dans les index
+-- ● Scénario : En auditant la structure de la table produits, tu découvres que
+-- deux développeurs ont créé chacun leur propre index sur la même colonne
+-- nom (idx_produits_nom et idx_p).
+-- ● Mission : Explique pourquoi ce doublon ralentit chaque ajout ou
+-- modification de produit, puis rédige la requête ALTER TABLE pour supprimer
+-- l'index redondant idx_p.
+-- ● Indice & Objectif : Comprendre qu'un index accélère la lecture (SELECT),
+-- mais a un coût en écriture (INSERT, UPDATE, DELETE).

@@ -1,0 +1,10 @@
+-- Exercice 7 : Le tri inutile avant le rangement
+-- ● Scénario : Tu tombes sur cette requête dans le code d'un tableau de bord :
+-- SELECT entrepot_id, COUNT(*) AS nb_references
+-- FROM (SELECT entrepot_id, prix_unitaire FROM produits ORDER BY prix_unitaire DESC) t
+-- GROUP BY entrepot_id;
+-- ● Mission : Repère l'étape Sort inutile dans EXPLAIN ANALYZE et réécris la
+-- requête de façon optimale.
+-- ● Indice & Objectif : GROUP BY regroupe les lignes sans se soucier de leur
+-- ordre initial ; trier avant de regrouper consomme de la RAM (sort_buffer_size)
+-- pour rien.

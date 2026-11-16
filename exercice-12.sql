@@ -1,0 +1,11 @@
+-- Exercice 12 : Décoder les boucles (loops) dans EXPLAIN ANALYZE
+-- ● Scénario : Tu veux afficher le nom de chaque entrepôt ainsi que le nom et le
+-- stock de chaque produit qu'il héberge.
+-- ● Mission : Exécute :
+-- EXPLAIN ANALYZE
+-- SELECT e.nom AS entrepot, p.nom AS produit, p.stock
+-- FROM entrepots e
+-- JOIN produits p ON p.entrepot_id = e.id;
+-- Lis l'arbre de l'intérieur vers l'extérieur, identifie le nombre de loops sur la
+-- recherche d'index fk_produits_entrepot et calcule le temps réel total passé
+-- dans cette boucle.

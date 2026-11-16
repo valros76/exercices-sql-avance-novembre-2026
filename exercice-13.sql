@@ -1,0 +1,10 @@
+-- Exercice 13 : La pagination infinie sans essoufflement (Keyset
+-- Pagination)
+-- ● Scénario : Le catalogue web pagine les produits 5 par 5. Sur une table de
+-- millions de lignes, SELECT id, nom FROM produits ORDER BY id LIMIT 5
+-- OFFSET 15; oblige le moteur à lire et jeter les 15 premières lignes avant
+-- d'afficher les 5 suivantes.
+-- ● Mission : Remplace ce OFFSET coûteux par la technique du Keyset
+-- Pagination (en supposant que le dernier id affiché sur la page précédente
+-- était 15) et compare le nombre de lignes parcourues (rows) dans EXPLAIN
+-- ANALYZE.

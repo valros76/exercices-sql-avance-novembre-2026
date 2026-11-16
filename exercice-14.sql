@@ -1,0 +1,8 @@
+-- Exercice 14 : Le podium sans écraser les lignes (CTE + DENSE_RANK)
+-- ● Scénario : Le directeur commercial veut mettre en avant sur la page
+-- d'accueil les 2 produits les plus chers de chaque catégorie, tout en
+-- conservant leur prix et leur rang exact.
+-- ● Mission : Construis une CTE (WITH) utilisant DENSE_RANK() OVER (PARTITION
+-- BY categorie_id ORDER BY prix_unitaire DESC), filtre les 2 premiers rangs de
+-- chaque catégorie et inspecte le nœud Window aggregate avec EXPLAIN
+-- ANALYZE.

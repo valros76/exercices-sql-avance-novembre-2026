@@ -1,0 +1,13 @@
+-- 🌱 Acte I : Les fondamentaux d'un code propre
+-- (Exercices 1 à 4)
+-- Avant de sortir le chronomètre EXPLAIN ANALYZE, assurons-nous que nos fondations
+-- sont saines et que nous ne gaspillons pas les ressources du serveur.
+-- Exercice 1 : Le réflexe anti-SELECT * (L'annuaire VIP)
+-- ● Scénario : L'équipe marketing prépare une campagne de fidélisation et te
+-- demande simplement la liste des clients avec leur segment (Entreprise,
+-- Grand Compte, PME, Startup).
+-- ● Mission : Écris la requête récupérant uniquement le nom et le segment des
+-- clients. Lance ensuite EXPLAIN devant ta requête et observe la colonne Extra.
+-- ● Indice & Objectif : Repère l'index idx_clients_covering déjà présent dans ta
+-- base. Grâce à lui, InnoDB lit directement le sommaire sans ouvrir la table
+-- principale (Using index / Index Only Scan).

@@ -1,0 +1,8 @@
+-- Exercice 2 : Alerte rupture de stock !
+-- ● Scénario : Le responsable logistique de l'entrepôt Paris-Nord craint des
+-- ruptures sur les équipements critiques. Il veut la liste des produits ayant un
+-- stock strictement inférieur à 25 unités, triés du stock le plus critique au plus
+-- confortable.
+-- ● Mission : Affiche l'id, le nom et le stock des produits concernés.
+-- ● Indice & Objectif : Maîtriser le filtrage (WHERE) et le tri (ORDER BY) en ne
+-- ramenant que les colonnes utiles.
