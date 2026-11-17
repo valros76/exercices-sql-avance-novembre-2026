@@ -2,9 +2,7 @@
 -- Économique
 -- ● Scénario : La CTO, Claire Moreau (manager_id IS NULL), te demande un
 -- rapport complet pour préparer la réorganisation annuelle de l'entreprise.
--- Elle veut visualiser l'ensemble de la chaîne hiérarchique depuis la direction
--- jusqu'au terrain, tout en comparant le salaire de chaque collaborateur à la
--- moyenne de son propre département.
+-- Elle veut visualiser l'ensemble de la chaîne hiérarchique depuis la direction jusqu'au terrain, tout en comparant le salaire de chaque collaborateur à la moyenne de son propre département.
 -- ● Mission : Combine trois notions avancées dans une seule requête propre,
 -- lisible et sécurisée :
 -- 1. Récursivité (WITH RECURSIVE) : Pars de Claire Moreau (niveau = 1) et

@@ -7,3 +7,5 @@
 -- mais a un coût en écriture (INSERT, UPDATE, DELETE).
 
 ALTER TABLE produits DROP INDEX idx_p;
+
+-- Gain en lecture / perte en écriture, donc chaque occurence amplifie exponentiellement le problème.

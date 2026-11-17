@@ -2,9 +2,7 @@
 -- ● Scénario : Le service commercial veut retrouver les clients inscrits en 2024.
 -- Un stagiaire a écrit :
 -- SELECT nom, email FROM clients WHERE YEAR(date_inscription) = 2024;
--- ● Mission : Ajoute un index sur clients(date_inscription), explique pourquoi
--- YEAR(...) rend cet index aveugle, puis réécris la requête avec des bornes
--- d'intervalle (prédicat SARGable).
+-- ● Mission : Ajoute un index sur clients(date_inscription), explique pourquoi YEAR(...) rend cet index aveugle, puis réécris la requête avec des bornes d'intervalle (prédicat SARGable).
 -- ● Indice & Objectif : Ne jamais enfermer une colonne indexée dans une
 -- fonction dans la clause WHERE.
 
@@ -13,3 +11,5 @@ SELECT
 nom, email 
 FROM clients 
 WHERE date_inscription >= '2024-01-01' AND date_inscription <= '2024-12-31';
+
+-- YEAR transforme la donnée en YYYY, l'index réponds alors NULL car il stocke les données au format YYYY-MM-DD
